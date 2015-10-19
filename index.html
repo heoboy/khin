@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Khin</title>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css">
+  <link href="http://vjs.zencdn.net/5.0.0/video-js.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.20/require.min.js"></script>
+  <script src="main.js"></script>
+
+  <style>
+    body {
+      padding: 1em;
+      padding-top: 5em;
+    }
+    video {
+      max-width: 100%;
+      margin: 1em 0;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="ui top fixed menu">
+    <a class="item" ui-sref="monday" ui-sref-active="active">Mon</a>
+    <a class="item" ui-sref="tuesday" ui-sref-active="active">Tue</a>
+    <a class="item" ui-sref="wed" ui-sref-active="active">Wed</a>
+  </div>
+  <div class="ui container" style="text-align: center">
+    <div ui-view></div>
+  </div>
+</body>
+</html>
