@@ -26,7 +26,10 @@ requirejs([
   'router',
   'text!./monday.html',
   'text!./tuesday.html',
-  'text!./wed.html'
+  'text!./wed.html',
+  'text!./thu.html',
+  'text!./fri.html',
+  'text!./notes.html'
 ], function(angular) {
   angular
     .module('khin', ['ui.router'])
@@ -39,7 +42,7 @@ requirejs([
   function config($locationProvider, $urlRouterProvider, $stateProvider) {
 
     $urlRouterProvider.otherwise(function($injector) {
-      $injector.get('$state').go('monday');
+      $injector.get('$state').go('notes');
     });
 
     $stateProvider
@@ -54,7 +57,18 @@ requirejs([
       .state('wed', {
         url: '/wed',
         template: require('text!./wed.html')
+      })
+      .state('thu', {
+        url: '/thu',
+        template: require('text!./thu.html')
+      })
+      .state('fri', {
+        url: '/fri',
+        template: require('text!./fri.html')
+      })
+      .state('notes', {
+        url: '/notes',
+        template: require('text!./notes.html')
       });
   }
 });
-
